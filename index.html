@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anambra State ICT Agency</title>
+    <script>
+      // Diagnostic Guard: Ensures window.fetch is writable to prevent "Cannot set property fetch of #<Window>" errors in sandboxed iframes.
+      (function() {
+        try {
+          const nativeFetch = window.fetch;
+          let activeFetch = nativeFetch;
+          Object.defineProperty(window, 'fetch', {
+            get() {
+              return activeFetch;
+            },
+            set(newFetch) {
+              activeFetch = newFetch;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          console.warn("Unable to redefine window.fetch directly:", e);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

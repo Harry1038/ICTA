@@ -1,0 +1,6 @@
+{
+  "name": "Anambra State ICT Agency",
+  "description": "The premium digital transformation portal of Nigeria's first AI-Native ICT Agency, driving smart governance, citizen engagement, and technological infrastructure across Anambra State.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
